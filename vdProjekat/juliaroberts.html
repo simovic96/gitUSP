@@ -1,0 +1,227 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Festival - Julia Roberts</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/glumci.css">
+		<link rel="stylesheet" href="css/lightbox.min.css">
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/lightbox-plus-jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script language="javascript">
+		var brojac = 0;
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/BdmOjfGTUzQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/N3b0PFCrayE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/u2soKNPRALc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/4RI0QvaGoiI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		function prethodni() {
+			brojac = (brojac==0)?3:(brojac-1);
+			popuniDiv();
+		}
+		function sledeci() {
+			brojac = (brojac+1)%4;
+			popuniDiv();
+		}
+		function popuniDiv() {
+			document.getElementById('popuni').innerHTML = niz[brojac];
+		}
+		</script>
+		
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
+			<a href="index.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center nav-ul">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="ofestivalu.html">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
+					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
+					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
+					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link active activeLink" href="glumci.html">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="vesti.html">Vesti</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="juliarobertsENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		</div>
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+		<div class="row">
+		<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
+					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
+					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
+						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Pocetna</a></li>
+						<li class="breadcrumb-item"><a href="glumci.html" class="breadcrumb-link">Glumci</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Julia Roberts</li>
+					  </ol>
+					</nav>
+				</div>
+				</div>
+			<div class="row">
+				<div class="offset-sm-1 col-sm-9">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2>Julia Roberts</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<img class="img img-responsive" style="width:40%; float:left; margin-right:10px;" src="img/juliaroberts-opis.jpg">
+							<h3>Osnovno</h3>
+							<p>
+							Džulija Roberts (engl. Julia Roberts, 28. oktobar 1967. godine u Smirni, Džordžija) je američka filmska glumica i bivši model. Svetsku slavu je stekla 1990, zahvaljujući glavnoj ulozi u drami Zgodna žena, a kasnije i ulogama u romantičnim komedijama. Najpoznatije od njih su Venčanje mog najboljeg druga, Ja u ljubav verujem i Odbegla mlada. Za ulogu u drami Erin Brokovič, iz 2000. godine, dobila je Zlatni globus, nagradu BAFTA i Oskar za najbolju glavnu glumicu.
+							</p>
+							<h3>Detinjstvo i obrazovanje</h3>
+							<p>
+							Džulija je rođena u Smirni, nedaleko od Atlante kao Džulija Fiona Roberts. Njen otac se zvao Volter Gredi Roberts, a majka Beti Lu. Njih dvoje su se razveli 1971, nakon čega se Beti udaje za Majkla Moutsa. Šest godina kasnije, Volter je umro od raka. Džulija ima starijeg brata Erika, koji je takođe glumac. Kao dete želela je da postane veterinar, ali nakon završetka srednje škole „Kembel“ i pohađanja „Univerziteta Džordžija“, odlazi u Njujork da se bavi glumom. Išla je na časove glume, a radila kao model.
+							</p>
+							<h3>Karijera</h3>
+							<p>
+							Već 1990. godine Robertsova stiče svetsku slavu ulogom u romantičnoj drami „Zgodna žena“, za koju dobija Zlatni globus za najbolju glavnu glumicu i drugu nominaciju za Oskar. Džulija se za ovu ulogu izborila u konkurenciji koju su činile Deril Hana i Meg Rajan, koja je tada bila velika zvezda ljubavnih drama. Tema filma je romansa koja se rađa između prostitutke i biznismena, kog tumači Ričard Gir. Ovaj film je širom sveta zaradio više od 460.000.000 dolara, što ga stavlja na četvrto mesto na listi romantičnih komedija sa najvećom zaradom, pa se smatra finansijski najuspešnijim filmom u Džulijinoj karijeri. Sledeće godine igrala je medicinsku sestru Hilari u drami „Umreti mlad“, zatim u bioskopskom hitu „U krevetu sa neprijateljem“ i Zvončicu u Spilbergovom „Kuki“, nakon čega je prestala sa snimanjem na neko vreme. Magazin „Pipl“ je povodom toga objavio tekst „Šta se dogodilo sa Džulijom Roberts?“, što je u javnosti izazvalo brojne kontraverze. Godine 1993, dobila je ulogu Eni Rid u filmu „Besani u Sijetlu“, ali je odbila u korist Meg Rajan.
+							</p>
+							<h3>Privatni život</h3>
+							<p>Privatni život Džulije Roberts bio je u žiži interesovanja još od početka njene karijere. Bila je u vezi sa Lijamom Nisonom, Kiferom Saderlandom, Džejsonom Patrikom, Metjuom Perijem, Bendžaminom Bretom i mnogim drugima. Sa Saderlandom je čak bila verena, ali je raskinula veridbu tri dana pre venčanja i otputovala u Irsku sa njegovim prijateljem Džejsonom Patrikom. Godine 1993, venčala se sa Lajlom Lavetom, a 1995. su se razveli. Danas je u braku sa kamermanom Danijelom Moderom. Upoznali su se na snimanju filma „Meksikanac“, a venčali 4. juna 2002. godine. Imaju troje dece.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							<h2>Trejler</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="popuni" width="100%" height="50%">
+								<iframe width="100%" style="min-height:50%" src="https://www.youtube.com/embed/BdmOjfGTUzQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							<br>
+							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
+							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						<hr>
+						<h2>Galerija</h2>
+						<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<center><a class="example-image-link" href="img/jr1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/jr1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/jr2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/jr2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/jr3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/jr3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/jr4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/jr4.jpg" alt="image-1" /></a></center>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<table><tr><img class="img img-responsive" style="margin-top:10%;" src="img/banner.gif"></tr><tr><img class="img img-responsive" style="margin-top:10%;" src="img/banner.gif"></tr></table>
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer class="page-footer font-small white pt-0" style="margin-top:5px; border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
+		<div class="footer-copyright py-3 text-center">
+        <i>© 2018 Copyright: Jovanovic Tijana, Simovic Aleksa, Odsek za softversko inženjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu
+		</i>
+		</div>
+		</footer>
+	
+	
+	</body>
+</html>

@@ -1,0 +1,227 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Festival - Leonardo DiCaprio</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/glumci.css">
+		<link rel="stylesheet" href="css/lightbox.min.css">
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/lightbox-plus-jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script language="javascript">
+		var brojac = 0;
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/oYiT-vLjhC4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/6UGsRcxaSAI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/sN183rJltNM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/5iaYLCiq5RM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		function prethodni() {
+			brojac = (brojac==0)?3:(brojac-1);
+			popuniDiv();
+		}
+		function sledeci() {
+			brojac = (brojac+1)%4;
+			popuniDiv();
+		}
+		function popuniDiv() {
+			document.getElementById('popuni').innerHTML = niz[brojac];
+		}
+		</script>
+		
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
+			<a href="index.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center nav-ul">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="ofextivalu.html">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
+					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
+					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
+					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link active activeLink" href="glumci.html">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="vesti.html">Vesti</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="leonardodicaprioENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		</div>
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+		<div class="row">
+		<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
+					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
+					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
+						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Pocetna</a></li>
+						<li class="breadcrumb-item"><a href="glumci.html" class="breadcrumb-link">Glumci</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Leonardo DiCaprio</li>
+					  </ol>
+					</nav>
+				</div>
+				</div>
+			<div class="row">
+				<div class="offset-sm-1 col-sm-9">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2>Leonardo DiCaprio</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<img class="img img-responsive" style="width:40%; float:left; margin-right:10px;" src="img/leonardodicaprio-opis.jpg">
+							<h3>Osnovno</h3>
+							<p>
+							Leonardo Vilhelm Dikaprio (Leonardo Wilhelm DiCaprio, Los Anđeles, 11. novembra 1974.),američki je glumac i producent. Pet puta je nominovan za nagradu Oskar, za najboljeg glumca u glavnoj ulozi u filmovima Avijatičar (2004), Krvavi dijamant (2006), Vuk sa Vol Strita (2013) i Povratnik (2016), za koji je i dobio ovu nagradu. Takođe, bio je nominovan i za najboljeg glumca u sporednoj ulozi u filmu Šta izjeda Gilberta Grejpa (1994), četiri puta za nagradu BAFTA, a jedanaest puta za nagradu Zlatni globus.
+							</p>
+							<h3>Detinjstvo i obrazovanje</h3>
+							<p>
+							Leonardo Dikaprio je sin jedinac, rođen u Los Anđelesu u Kaliforniji. Njegova majka, Irmelin Indenbirken, bivša sekretarica, rođena je u Nemačkoj, gde je živela do 1950ih godina prošlog veka, kada se sa porodicom iz grada Er-Erkenšvik preselila u Sjedinjene Američke Države . Njegov otac, Džordž Dikaprio, crtač, producent i distributer stripova. Poreklom je polu-Italijan (iz Napulja, sa očeve strane) i polu-Nemac (iz Bavarije, sa majčine strane). Dikapriov deda po majci, Vilhelm Indenbirken bio je Nemac, a baba Helen Indenbirken (1915 – 2008)[7] takođe je bila nemačka državljanka, mada je rođena u Rusiji kao Jelena Smirnova. Leonardo Dikaprio osim maternjeg engleskog, tečno govori i nemački jezik.
+							</p>
+							<h3>Karijera</h3>
+							<p>
+							Dikaprio je glumačku karijeru započeo ulogama u reklamama i obrazovnim filmovima, kao i u sapunici Santa Barbara i sitkomu Od muke do nauke početkom devedesetih. Sa pet godina izbačen je sa snimanja dečje serije Romper Room jer je bio previše nestašan, a zatim sledi primer svog starijeg brata od maćehe, Adama Ferara, i počinje da se pojavljuje u reklamama. Sa 14 godina nastupio je u reklami za Mečboks automobile. Prvu ulogu na televiziji dobija 1989. u seriji Novi Lesi, a 1990. glumi Gerija Bakmena u seriji Roditeljstvo, televizijskoj adaptaciji istoimenog filma. Tokom pojavljivanja u seriji Roditeljstvo, Dikaprio je igrao manje uloge u serijama Santa Barbara i Rozen. Nakon toga je u Ej-Bi-Si-jevom sitkomu Od muke do nauke (1991 – 1992) tumačio ulogu Luka Brauera, dečaka beskućnika koga je prihvatila porodica Siver. Za uloge u serijama Roditeljstvo, Santa Barbara i Od muke do nauke bio je nominovan za nagradu Mladi umetnik (engl. Young Artist Award).
+							</p>
+							<h3>Privatni život</h3>
+							<p>Dikaprio je blizak prijatelj Tobija Megvajera, koga je upoznao na audiciji za seriju Roditeljstvo 1990. Godinama se druži sa Kevinom Konolijem, Lukasom Hasom i koleginicom iz filmova Titanik i Revolucionarni put, Kejt Vinslet. U toku detinjstva bio je prijatelj glumca Kristofera Pedita, koji je preminuo 2000.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							<h2>Trejler</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="popuni" width="100%" height="50%">
+								<iframe width="100%" height="100%" src="https://www.youtube.com/embed/oYiT-vLjhC4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							<br>
+							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
+							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						<hr>
+						<h2>Galerija</h2>
+						<hr>
+						</div>
+					</div>
+					<div class="row" height="25%">
+						<div class="col-sm-12">
+							<center><a class="example-image-link" href="img/ldc1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ldc1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/ldc2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ldc2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/ldc3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ldc3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/ldc4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ldc4.jpg" alt="image-1" /></a></center>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<table><tr><img class="img img-responsive" style="margin-top:10%;" src="img/banner.gif"></tr><tr><img class="img img-responsive" style="margin-top:10%;" src="img/banner.gif"></tr></table>
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer class="page-footer font-small white pt-0" style="margin-top:5px; border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
+		<div class="footer-copyright py-3 text-center">
+        <i>© 2018 Copyright: Jovanovic Tijana, Simovic Aleksa, Odsek za softversko inženjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu
+		</i>
+		</div>
+		</footer>
+	
+	
+	</body>
+</html>
