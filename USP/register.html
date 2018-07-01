@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<link rel="icon" href="img/favicon.png" type="image/x-icon"/>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
@@ -8,6 +9,20 @@
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<title>Festival - Početna</title>
+		<script>
+		function checkReg() {
+			if (forma.mediator.value=="") {
+				alert("Ukoliko niste kupili medijator neophodno je da to učinite kako biste mogli da koristite naše usluge!");
+			}
+			if (forma.pass.value=="") {
+				alert("Unesite sifru!");
+				return;
+			}
+			if (forma.pass.value!=forma.pass2.value) {
+				alert("Ne podudaraju se sifre!");
+			}
+		}
+		</script>
 	</head>
 	<body style="background-color:#F2F2F2;">
 		<div class="container">
@@ -118,9 +133,50 @@
 	<div class="container-fluid">
 		<br>
 		<div class="row">
-			<div class="col-sm-12">
-				
-		</div>
+			<div class="col-sm-1">&nbsp;</div>
+			<div class="col-sm-10">
+				<h2>Registracija</h2>
+				<form method="post" action="" id="contactfrm" role="form" name="forma">
+					<div class="form-group">
+						<label for="ime">Ime</label>
+						<input type="text" class="form-control" name="ime" id="ime" placeholder="Unesite ime" title="Unesite svoje ime">
+					</div>
+					<div class="form-group">
+						<label for="prezime">Prezime</label>
+						<input type="text" class="form-control" name="prezime" id="prezime" placeholder="Unesite prezime" title="Unesite svoje ime">
+					</div>
+					<div class="form-group">
+						<label for="email">Email*</label>
+						<input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" required>
+					</div>
+					<div class="form-group">
+						<label for="username">Korisničko ime:*</label>
+						<input type="text" class="form-control" name="username" id="username" placeholder="Unesite korisnicko ime" title="Unesite svoj email" required>
+					</div>
+					<div class="form-group">
+						<label for="pass">Lozinka:*</label>
+						<input type="password" class="form-control" name="pass" id="pass" placeholder="Unesite lozinku" title="Unesite svoj email" required>
+					</div>
+					<div class="form-group">
+						<label for="pass2">Ponovite lozinku:*</label>
+						<input type="password" class="form-control" name="pass2" id="pass2" placeholder="Ponovite lozinku" title="Unesite svoj email" required>
+					</div>
+					<table width="100%">
+						<tr width="100%">
+							<td width="50%">
+								<div class="form-group">
+									<label for="mediator">Medijator:*</label>
+									<input type="text" class="form-control" name="mediator" id="mediator" placeholder="Unesite kod koji ste dobili prilikom kupovine medijatora" title="Unesite broj medijatora" value="">
+								</div>
+							</td>
+							<td  style="padding-top:13px"><button name="dugme" type="button" class="btn btn-read-more" id="posalji" onclick="pritisnuoPosalji()">Kupite Medijator</button></td>
+						</tr>
+					</table>
+					<p><i>Polja obeležena zvezdicom(*) neophodno je popuniti.</i></p>
+					<button name="dugme" type="submit" class="btn btn-lg btn-read-more" id="posalji" onclick="checkReg()">Pošalji</button>
+				</form>
+				<div id="rezultat" ></div>
+			</div>
 		</div>
 		
 	</div>
