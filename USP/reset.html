@@ -10,12 +10,29 @@
 		<script src="js/bootstrap.min.js"></script>
 		<title>Festival - Početna</title>
 		<script>
-		function checkFields() {
-			if (forma.odg1.value=="" || forma.odg2.value=="" || forma.odg3.value=="") {
-				alert("Molimo unesite sve odgovore!");
+		i=1;
+		function checkReg() {
+			i = 1-i;
+			if (forma.email.value=="") {
+				alert("Unesite email!");
 				return;
 			}
-			alert("Hvala Vam na izdvojenom vremenu, potrudićemo se da što više unapredimo aplikaciju!");
+			if (forma.username.value=="") {
+				alert("Unesite korisničko ime!");
+				return;
+			}
+			if (forma.answer.value=="") {
+				alert("Unesite odgovor!");
+				return;
+			}
+			if (forma.answer.value=="Marko") {
+				alert("Uneti podaci su korektni! Poslati su na Vašu e-mail adresu!");
+				return true;
+			}
+			else  {
+				alert("Nekorektna kombinacija!");
+				return false;
+			}
 		}
 		</script>
 	</head>
@@ -130,24 +147,33 @@
 		<div class="row">
 			<div class="col-sm-1">&nbsp;</div>
 			<div class="col-sm-10">
-				<div class="alert alert-dark" role="alert">
-					<i>Trenutno postoji aktivna anketa! Molimo Vas da je popunite, kako bismo unapredili kvalitet usluga!</i>
-				</div>
-				<h2>Anketa</h2>
+				<h2>Povratak lozinke</h2>
 				<form method="post" action="" id="contactfrm" role="form" name="forma">
 					<div class="form-group">
-						<label for="odg1">Da li ste zadovoljni aplikacijom? <i>Ako niste, opišite čime niste.</i></label>
-						<textarea name="komentar" class="form-control" id="odg1" cols="3" rows="5" placeholder="Unesite vašu poruku..." title="Unesite odgovor" value=""></textarea>
+					<div class="form-group">
+						<label for="email">Email:*</label>
+						<input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" value="" required>
 					</div>
 					<div class="form-group">
-						<label for="odg2">Koja funkcionalnost najviše koristite i zašto?</label>
-						<textarea name="komentar" class="form-control" id="odg2" cols="3" rows="5" placeholder="Unesite vašu poruku..." title="Unesite odgovor" value=""></textarea>
+						<label for="username">Korisničko ime:*</label>
+						<input type="text" class="form-control" name="username" id="username" placeholder="Unesite korisnicko ime" title="Unesite svoj email" required>
 					</div>
 					<div class="form-group">
-						<label for="odg3">Šta aplikacija trenutno ne omogućava, a Vama bi značilo?</label>
-						<textarea name="komentar" class="form-control" id="odg3" cols="3" rows="5" placeholder="Unesite vašu poruku..." title="Unesite odgovor" value=""></textarea>
+						<label for="question">Unesite sigurnosno pitanje:*</label>
+						<br>
+						<select>
+							<option>Kako Vam se zove ljubimac?</option>
+							<option>Kako je devojkačko prezime Vaše majke?</option>
+							<option>Gde ste rođeni?</option>
+							<option>Koja Vam je omiljena boja?</option>
+						</select>
 					</div>
-					<button name="dugme" type="submit" class="btn btn-lg btn-read-more" id="posalji" onclick="checkFields()">Pošalji</button>
+					<div class="form-group">
+						<label for="answer">Unesite odgovor:*</label>
+						<input type="text" class="form-control" name="answer" id="answer" placeholder="Ponovite lozinku" title="Unesite svoj email" required>
+					</div>
+					<p><i>Polja obeležena zvezdicom(*) neophodno je popuniti.</i></p>
+					<button name="dugme" type="submit" class="btn btn-lg btn-read-more" id="posalji" onclick="checkReg();">Pošalji</button>
 				</form>
 				<div id="rezultat" ></div>
 			</div>

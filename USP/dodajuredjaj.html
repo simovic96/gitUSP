@@ -192,19 +192,19 @@
 						<td><img src="img/frizider.jpg" height="40" width="40"></td>
 						<td>Frizider</td>
 						<td>da2sdad2yhg4</td>
-						<td><button type="button" class="btn btn-primary">Povezi se</button></td>
+						<td id="1"><button type="button" class="btn btn-primary"  onclick="change(1)">Povezi se</button></td>
 					  </tr>
 					  <tr>
 						<td><img src="img/mikser.png" height="40" width="40"></td>
 						<td>Mikser</td>
 						<td>sd3m3msda2</td>
-						<td><button type="button" class="btn btn-primary">Povezi se</button></td>
+						<td id="2"><button type="button" class="btn btn-primary"  onclick="change(2)">Povezi se</button></td>
 					  </tr>
 					  <tr>
 						<td><img src="img/vesmasina.png" height="40" width="40"></td>
 						<td>Ves masina</td>
 						<td>asbbb336ggd</td>
-						<td><button type="button" class="btn btn-primary">Povezi se</button></td>
+						<td id="3"><button type="button" class="btn btn-primary"  onclick="change(3)">Povezi se</button></td>
 					  </tr>
 					</tbody>
 				  </table>
@@ -237,6 +237,10 @@
 		function ugasiDivove(){
 			document.getElementById("loader").style.display = "none";
 			document.getElementById("myDiv").style.display = "none";
+		}
+		
+		function change(id) {
+			document.getElementById(id).innerHTML='<i>Povezan</i>';
 		}
 	</script>
 	</body>
