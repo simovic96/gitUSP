@@ -191,7 +191,7 @@
 					  </tr>
 					</thead>
 					<tbody>
-					  <tr>
+					  <tr id="1">
 						<td><img src="img/tv.jpg" height="40" width="40"></td>
 						<td>TV Samsung Cometa 330</td>
 						<td>da2sdad2yhg4</td>
@@ -199,7 +199,7 @@
 						<td><img src="img/signal4.png" height="40" width="40"></td>
 						<td>
 							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction1()">Statistika</button>
+								<button type="button" class="btn btn-info popup" onmouseenter="myFunction1()" onmouseleave="myFunction1()">Statistika</button>
 								<p class="popuptext" id="myPopup1">
 									Trajanje koriscenja: 245h 18m<br/>
 									Dnevno prosecno radi: 2h 17m<br/>
@@ -207,9 +207,9 @@
 								</p>
 							</div>
 						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
+						<td ><button onclick="cancel(1)"type="button" class="btn btn-danger">Prekini vezu</button></td>
 					  </tr>
-					  <tr>
+					  <tr id="2">
 						<td><img src="img/grejanje.png" height="40" width="40"></td>
 						<td>Parno grejanje stana</td>
 						<td>nvvv454dgha3</td>
@@ -217,7 +217,7 @@
 						<td><img src="img/signal5.png" height="40" width="40"></td>
 						<td>
 							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction2()">Statistika</button>
+								<button type="button" class="btn btn-info popup" onmouseenter="myFunction2()" onmouseleave="myFunction2()">Statistika</button>
 								<p class="popuptext" id="myPopup2">
 									Trajanje koriscenja: 15h 22m<br/>
 									Dnevno prosecno radi: 1h 22m<br/>
@@ -225,9 +225,9 @@
 								</p>
 							</div>
 						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
+						<td ><button onclick="cancel(2)"type="button" class="btn btn-danger">Prekini vezu</button></td>
 					  </tr>
-					  <tr>
+					  <tr id="3">
 						<td><img src="img/vesmasina.png" height="40" width="40"></td>
 						<td>Ves masina Bosch 1250</td>
 						<td>cccfd33fdsg44</td>
@@ -235,7 +235,7 @@
 						<td><img src="img/signal5.png" height="40" width="40"></td>
 						<td>
 							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction3()">Statistika</button>
+								<button type="button" class="btn btn-info popup" onmouseenter="myFunction3()" onmouseleave="myFunction3()">Statistika</button>
 								<p class="popuptext" id="myPopup3">
 									Trajanje koriscenja: 55h 32m<br/>
 									Dnevno prosecno radi: 1h 07m<br/>
@@ -243,9 +243,9 @@
 								</p>
 							</div>
 						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
+						<td ><button onclick="cancel(3)"type="button" class="btn btn-danger">Prekini vezu</button></td>
 					  </tr>
-					  <tr>
+					  <tr id="4">
 						<td><img src="img/sporet.png" height="40" width="40"></td>
 						<td>Elektricni sporet Gorenje 1231</td>
 						<td>34saasdg3sda</td>
@@ -253,7 +253,7 @@
 						<td><img src="img/signal3.png" height="40" width="40"></td>
 						<td>
 							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction4()">Statistika</button>
+								<button type="button" class="btn btn-info popup" onmouseenter="myFunction4()" onmouseleave="myFunction4()">Statistika</button>
 								<p class="popuptext" id="myPopup4">
 									Trajanje koriscenja: 196h 55m<br/>
 									Dnevno prosecno radi: 1h 47m<br/>
@@ -261,9 +261,9 @@
 								</p>
 							</div>
 						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
+						<td ><button onclick="cancel(4)"type="button" class="btn btn-danger">Prekini vezu</button></td>
 					  </tr>
-					  <tr>
+					  <tr id="5">
 						<td><img src="img/zamrzivac.png" height="40" width="40"></td>
 						<td>Zamrzivac Bosch FH210W</td>
 						<td>dfdg22ads522s</td>
@@ -271,7 +271,7 @@
 						<td><img src="img/signal2.png" height="40" width="40"></td>
 						<td>
 							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction5()">Statistika</button>
+								<button type="button" class="btn btn-info popup" onmouseenter="myFunction5()" onmouseleave="myFunction5()">Statistika</button>
 								<p class="popuptext" id="myPopup5">
 									Trajanje koriscenja: 99h 02m<br/>
 									Dnevno prosecno radi: 8h 12m<br/>
@@ -279,7 +279,7 @@
 								</p>
 							</div>
 						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
+						<td ><button onclick="cancel(5)"type="button" class="btn btn-danger">Prekini vezu</button></td>
 					  </tr>
 					</tbody>
 				  </table>
@@ -314,6 +314,9 @@
 		function myFunction5() {
 			var popup = document.getElementById("myPopup5");
 			popup.classList.toggle("show");
+		}
+		function cancel(id) {
+			document.getElementById(id).innerHTML="";
 		}
 	</script>
 	</body>
