@@ -177,113 +177,65 @@
 	<div class="container">
 		<br>
 		<div class="row justify-content-center align-items-center">
-			<h2>Moji uredjaji</h2>				  
-				  <table class="table table-striped">
-					<thead>
-					  <tr>
-						<th></th>
-						<th>Uredjaj</th>
-						<th>Serijski broj</th>
-						<th>Povezan od</th>
-						<th>Jacina signala</th>
-						<th></th>
-						<th></th>
-					  </tr>
-					</thead>
-					<tbody>
-					  <tr>
-						<td><img src="img/tv.jpg" height="40" width="40"></td>
-						<td>TV Samsung Cometa 330</td>
-						<td>da2sdad2yhg4</td>
-						<td>01-05-2017</td>
-						<td><img src="img/signal4.png" height="40" width="40"></td>
-						<td>
-							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction1()">Statistika</button>
-								<p class="popuptext" id="myPopup1">
-									Trajanje koriscenja: 245h 18m<br/>
-									Dnevno prosecno radi: 2h 17m<br/>
-									Broj zadatih komandi: 9	
-								</p>
-							</div>
-						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
-					  </tr>
-					  <tr>
-						<td><img src="img/grejanje.png" height="40" width="40"></td>
-						<td>Parno grejanje stana</td>
-						<td>nvvv454dgha3</td>
-						<td>04-12-2017</td>
-						<td><img src="img/signal5.png" height="40" width="40"></td>
-						<td>
-							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction2()">Statistika</button>
-								<p class="popuptext" id="myPopup2">
-									Trajanje koriscenja: 15h 22m<br/>
-									Dnevno prosecno radi: 1h 22m<br/>
-									Broj zadatih komandi: 3	
-								</p>
-							</div>
-						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
-					  </tr>
-					  <tr>
-						<td><img src="img/vesmasina.png" height="40" width="40"></td>
-						<td>Ves masina Bosch 1250</td>
-						<td>cccfd33fdsg44</td>
-						<td>05-06-2018</td>
-						<td><img src="img/signal5.png" height="40" width="40"></td>
-						<td>
-							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction3()">Statistika</button>
-								<p class="popuptext" id="myPopup3">
-									Trajanje koriscenja: 55h 32m<br/>
-									Dnevno prosecno radi: 1h 07m<br/>
-									Broj zadatih komandi: 25	
-								</p>
-							</div>
-						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
-					  </tr>
-					  <tr>
-						<td><img src="img/sporet.png" height="40" width="40"></td>
-						<td>Elektricni sporet Gorenje 1231</td>
-						<td>34saasdg3sda</td>
-						<td>05-06-2018</td>
-						<td><img src="img/signal3.png" height="40" width="40"></td>
-						<td>
-							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction4()">Statistika</button>
-								<p class="popuptext" id="myPopup4">
-									Trajanje koriscenja: 196h 55m<br/>
-									Dnevno prosecno radi: 1h 47m<br/>
-									Broj zadatih komandi: 7	
-								</p>
-							</div>
-						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
-					  </tr>
-					  <tr>
-						<td><img src="img/zamrzivac.png" height="40" width="40"></td>
-						<td>Zamrzivac Bosch FH210W</td>
-						<td>dfdg22ads522s</td>
-						<td>02-02-2018</td>
-						<td><img src="img/signal2.png" height="40" width="40"></td>
-						<td>
-							<div class="popup">
-								<button type="button" class="btn btn-info popup" onclick="myFunction5()">Statistika</button>
-								<p class="popuptext" id="myPopup5">
-									Trajanje koriscenja: 99h 02m<br/>
-									Dnevno prosecno radi: 8h 12m<br/>
-									Broj zadatih komandi: 4	
-								</p>
-							</div>
-						</td>
-						<td><button type="button" class="btn btn-danger">Prekini vezu</button></td>
-					  </tr>
-					</tbody>
-				  </table>
-	  </div>
+			<div id="piechart1"></div>
+
+				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+				<script type="text/javascript">
+				// Load google charts
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+
+				// Draw the chart and set the chart values
+				function drawChart() {
+				  var data = google.visualization.arrayToDataTable([
+				  ['Task', 'Hours per Day'],
+				  ['TV Samsung', 9],
+				  ['Parno grejanje', 3],
+				  ['Ves masina', 25],
+				  ['Sporet Gorenje', 7],
+				  ['Zamrzivac Bosch', 4]
+				]);
+
+				  // Optional; add a title and set the width and height of the chart
+				  var options = {'title':'Broj komandi za uredjaje', 'width':550, 'height':400};
+
+				  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+				  chart.draw(data, options);
+				}
+				</script>
+				
+				
+				
+				
+			<div id="piechart2"></div>
+
+				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+				<script type="text/javascript">
+				// Load google charts
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+
+				// Draw the chart and set the chart values
+				function drawChart() {
+				  var data = google.visualization.arrayToDataTable([
+				  ['Task', 'Hours per Day'],
+				  ['TV Samsung', 137],
+				  ['Parno grejanje', 82],
+				  ['Ves masina', 67],
+				  ['Sporet Gorenje', 107],
+				  ['Zamrzivac Bosch', 492]
+				]);
+
+				  // Optional; add a title and set the width and height of the chart
+				  var options = {'title':'Prosecno dnevno koriscenje', 'width':550, 'height':400};
+
+				  var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+				  chart.draw(data, options);
+				}
+				</script>
+		</div>
 		
 	</div>
 	<footer class="fixed-bottom page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white; ">
@@ -293,28 +245,6 @@
     </div>
 	</footer>
 	
-	<script>
-	// When the user clicks on div, open the popup
-		function myFunction1() {
-			var popup = document.getElementById("myPopup1");
-			popup.classList.toggle("show");
-		}
-		function myFunction2() {
-			var popup = document.getElementById("myPopup2");
-			popup.classList.toggle("show");
-		}
-		function myFunction3() {
-			var popup = document.getElementById("myPopup3");
-			popup.classList.toggle("show");
-		}
-		function myFunction4() {
-			var popup = document.getElementById("myPopup4");
-			popup.classList.toggle("show");
-		}
-		function myFunction5() {
-			var popup = document.getElementById("myPopup5");
-			popup.classList.toggle("show");
-		}
-	</script>
+
 	</body>
 </html>
