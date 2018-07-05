@@ -1,67 +1,105 @@
+<!DOCTYPE HTML>
 <html>
-	<head>
+<head>
+<script>
+window.onload = function () {
+
+var dps = []; // dataPoints
+var chart = new CanvasJS.Chart("chartContainer", {
+	title :{
+		text: "Prosečna temperatura"
+	},
+	axisY: {
+		includeZero: false
+	},      
+	data: [{
+		type: "line",
+		dataPoints: dps
+	}]
+});
+
+var xVal = 0;
+var yVal = 22; 
+var updateInterval = 1250;
+var dataLength = 30; // number of dataPoints visible at any point
+
+var updateChart = function (count) {
+
+	count = count || 1;
+
+	for (var j = 0; j < count; j++) {
+		yVal = yVal +  0.0625 + Math.random() *(-0.125);
+		dps.push({
+			x: xVal,
+			y: yVal
+		});
+		xVal++;
+	}
+
+	if (dps.length > dataLength) {
+		dps.shift();
+	}
+
+	chart.render();
+};
+
+updateChart(dataLength);
+setInterval(function(){updateChart()}, updateInterval);
+
+
+var dps1 = []; // dataPoints
+var chart1 = new CanvasJS.Chart("chartContainer1", {
+	title :{
+		text: "Vlažnost vazduha"
+	},
+	axisY: {
+		includeZero: false
+	},      
+	data: [{
+		type: "line",
+		dataPoints: dps1
+	}]
+});
+
+var xVal1 = 0;
+var yVal1 = 45; 
+var updateInterval1 = 1250;
+var dataLength1 = 30; // number of dataPoints visible at any point
+
+var updateChart1 = function (count) {
+
+	count = count || 1;
+
+	for (var j = 0; j < count; j++) {
+		yVal1 = yVal1 +  0.75 + Math.random() *(-1.5);
+		dps1.push({
+			x: xVal1,
+			y: yVal1
+		});
+		xVal1++;
+	}
+
+	if (dps1.length > dataLength1) {
+		dps1.shift();
+	}
+
+	chart1.render();
+};
+
+updateChart1(dataLength1);
+setInterval(function(){updateChart1()}, updateInterval1);
+
+}
+</script>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
-		<script src="js/jquery-3.3.1.slim.min.js"></script>
-		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<title>Festival - Početna</title>
-		<style>
-		#loader {
-		  position: absolute;
-		  left: 50%;
-		  top: 300%;
-		  z-index: 1;
-		  width: 150px;
-		  height: 150px;
-		  margin: -75px 0 0 -75px;
-		  border: 16px solid #f3f3f3;
-		  border-radius: 50%;
-		  border-top: 16px solid #3498db;
-		  width: 120px;
-		  height: 120px;
-		  -webkit-animation: spin 2s linear infinite;
-		  animation: spin 2s linear infinite;
-		}
-
-		@-webkit-keyframes spin {
-		  0% { -webkit-transform: rotate(0deg); }
-		  100% { -webkit-transform: rotate(360deg); }
-		}
-
-		@keyframes spin {
-		  0% { transform: rotate(0deg); }
-		  100% { transform: rotate(360deg); }
-		}
-
-		/* Add animation to "page content" */
-		.animate-bottom {
-		  position: relative;
-		  -webkit-animation-name: animatebottom;
-		  -webkit-animation-duration: 1s;
-		  animation-name: animatebottom;
-		  animation-duration: 1s
-		}
-
-		@-webkit-keyframes animatebottom {
-		  from { bottom:-100px; opacity:0 } 
-		  to { bottom:0px; opacity:1 }
-		}
-
-		@keyframes animatebottom { 
-		  from{ bottom:-100px; opacity:0 } 
-		  to{ bottom:0; opacity:1 }
-		}
-
-		#myDiv {
-		  display: none;
-		  text-align: center;
-		}
-	</style>
-	</head>
-	<body style="background-color:#F2F2F2;" onload="ugasiDivove()">
+</head>
+<body style="background-color:#F2F2F2;">
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-12">
@@ -167,81 +205,18 @@
 			</div>
 			</div>
 		</nav>
-	<div class="container">
-		<br>
-		<div class="row justify-content-center align-items-center">
-			<div class="col-sm-6">
-				<center><button type="button" class="btn btn-primary btn-lg" onclick="myFunction()">Pronadjite uredjaje u okolini medijatora</button></center>
-				
-				<div id="loader"></div>
-
-				<div style="display:none;" id="myDiv" class="animate-bottom">
-					<br/><br/>
-				  <h2>Pronadjeni uredjaji</h2>				  
-				  <table class="table table-striped">
-					<thead>
-					  <tr>
-						<th></th>
-						<th>Uredjaj</th>
-						<th>Serijski broj</th>
-						<th></th>
-					  </tr>
-					</thead>
-					<tbody>
-					  <tr>
-						<td><img src="img/frizider.jpg" height="40" width="40"></td>
-						<td>Frizider</td>
-						<td>da2sdad2yhg4</td>
-						<td id="1"><button type="button" class="btn btn-primary"  onclick="change(1)">Povezi se</button></td>
-					  </tr>
-					  <tr>
-						<td><img src="img/mikser.png" height="40" width="40"></td>
-						<td>Mikser</td>
-						<td>sd3m3msda2</td>
-						<td id="2"><button type="button" class="btn btn-primary"  onclick="change(2)">Povezi se</button></td>
-					  </tr>
-					  <tr>
-						<td><img src="img/vesmasina.png" height="40" width="40"></td>
-						<td>Ves masina</td>
-						<td>asbbb336ggd</td>
-						<td id="3"><button type="button" class="btn btn-primary"  onclick="change(3)">Povezi se</button></td>
-					  </tr>
-					</tbody>
-				  </table>
-				</div>
-				
-			</div>
-		</div>
 		
-	</div>
-	<footer class="fixed-bottom page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
+		<br>
+		<center><div id="chartContainer" style="height: 300px; width: 80%;"></div></center>
+		<br>
+		<center><div id="chartContainer1" style="height: 300px; width: 80%;"></div></center>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<br>
+	<footer class="page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white; ">
 		<div class="footer-copyright py-3 text-center">
         <i>© 2018 Copyright: Skorković Srđan, Simović Aleksa, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
 		</i>
     </div>
 	</footer>
-	
-	<script>
-		var myVar;
-
-		function myFunction() {
-			document.getElementById("loader").style.display = "block";
-			myVar = setTimeout(showLoad, 3000);
-		}
-
-		function showLoad() {
-		  document.getElementById("loader").style.display = "none";
-		  document.getElementById("myDiv").style.display = "block";
-		}
-		
-		function ugasiDivove(){
-			document.getElementById("loader").style.display = "none";
-			document.getElementById("myDiv").style.display = "none";
-		}
-		
-		function change(id) {
-			document.getElementById(id).innerHTML='<i>Dodat</i>';
-		}
-	</script>
-	</body>
+</body>
 </html>
