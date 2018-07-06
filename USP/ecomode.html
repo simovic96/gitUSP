@@ -1,15 +1,17 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<title>Festival - Početna</title>
+		<title>EcoMode</title>
 	</head>
-	<body style="background-color:#F2F2F2;">
+	<body style="background-color:white;">
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-12">
@@ -20,42 +22,47 @@
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
-				<li class="nav-item active activeLink">
-					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
+				<li class="nav-item ">
+					<a class="nav-link" href="index.html">Početna </a>
 				  </li>
 				  <li class="nav-item dropdown">
-					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Festival
+					<a class="nav-link " href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Komande <span class="sr-only">(current)</span>
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
-					  <a class="dropdown-item" href="ofestivalu.html">O Festivalu</a>
-					  <a class="dropdown-item" href="ziri.html">Žiri</a>
-					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
-					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
-					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					  <a class="dropdown-item" href="zadajkomandu.html">Zadajte komandu</a>
+					  <a class="dropdown-item" href="prikazizadateakcije.html">Trenutne</a>
 					</div>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Program
+					  Uređaji
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
-					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
-					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					  <a class="dropdown-item" href="dodajuredjaj.html">Pretraga</a>
+					  <a class="dropdown-item" href="prikazmojihuredjaja.html">Moji uređaji</a>
 					</div>
 				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="glumci.html">Glumci</a>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Pregled
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="istorijaakcija.html">Istorija</a>
+					  <a class="dropdown-item" href="opstastatistika.html">Statistika</a>
+					  <a class="dropdown-item" href="parametriStanje.html">Stanje parametara</a>
+					</div>
+				  </li>
+				  <li class="nav-item active activeLink">
+					<a class="nav-link" href="ecomode.html">EcoMode</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="vesti.html">Vesti</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+					<a class="nav-link" href="anketa.html">Anketa</a>
 				  </li>
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/nonotif.png"></a> </li>
+				
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
@@ -117,14 +124,46 @@
 		</nav>
 	<br>
 	
-	
-	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2><center>Uključite EcoMode za efikasnije iskorišćenje energije: </center></h2>
+				<hr>
+			</div>
+		</div>
+		<div class="row" >
+			<div class="col-sm-12" id="finished">
+				
+				<div id="3"></div>
+				<div id="2"></div>
+				<div id="1"></div>
+				<center id="11" onclick="fja()"><img width="300px" height="300px" src="img/eco.png" ></center>
+			</div>
+		</div>
+	</div>
+	<script>
+	str="";
+	i=0;
+	arr = new Array('a','veš mašine', 'bojlera', 'peći za grejanje');
+	function addAlert() {
+		if (i!=3) {
+			i++;
+			document.getElementById(i).innerHTML = '<div class="alert alert-success" role="alert" id="112"><center><i>Uspešno su optimizovane akcije '+arr[i] +'!</i></center></div>';
+			setTimeout("addAlert()",1750);
+		} else {
+			document.getElementById("finished").innerHTML = '<div class="alert alert-success" role="alert" id="112"><center><i>EcoMode je uspostavljen!</i></center></div>';
+		}
+	}
+	function fja() {
+		document.getElementById("11").innerHTML = '<img src="img/load.gif">';
+		setTimeout("addAlert()",1750);
+	}
+	</script>
 	<footer class="fixed-bottom page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white; ">
 		<div class="footer-copyright py-3 text-center">
         <i>© 2018 Copyright: Skorković Srđan, Simović Aleksa, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
 		</i>
     </div>
 	</footer>
-
 	</body>
 </html>

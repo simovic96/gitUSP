@@ -1,13 +1,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+		
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<title>Festival - Početna</title>
+		<title>Statistika</title>
 		<style>
 			/* Popup container - can be anything you want */
 			.popup {
@@ -79,42 +81,46 @@
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
-				<li class="nav-item active activeLink">
-					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
+				<li class="nav-item ">
+					<a class="nav-link" href="index.html">Početna </a>
 				  </li>
 				  <li class="nav-item dropdown">
-					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Festival
+					<a class="nav-link " href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Komande <span class="sr-only">(current)</span>
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
-					  <a class="dropdown-item" href="ofestivalu.html">O Festivalu</a>
-					  <a class="dropdown-item" href="ziri.html">Žiri</a>
-					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
-					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
-					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					  <a class="dropdown-item" href="zadajkomandu.html">Zadajte komandu</a>
+					  <a class="dropdown-item" href="prikazizadateakcije.html">Trenutne</a>
 					</div>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Program
+					  Uređaji
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
-					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
-					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					  <a class="dropdown-item" href="dodajuredjaj.html">Pretraga</a>
+					  <a class="dropdown-item" href="prikazmojihuredjaja.html">Moji uređaji</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown active activeLink">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Pregled
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="istorijaakcija.html">Istorija</a>
+					  <a class="dropdown-item" href="opstastatistika.html">Statistika</a>
+					  <a class="dropdown-item" href="parametriStanje.html">Stanje parametara</a>
 					</div>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="glumci.html">Glumci</a>
+					<a class="nav-link" href="ecomode.html">EcoMode</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="vesti.html">Vesti</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+					<a class="nav-link" href="anketa.html">Anketa</a>
 				  </li>
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/nonotif.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
@@ -194,13 +200,13 @@
 				  ['Task', 'Hours per Day'],
 				  ['TV Samsung', 9],
 				  ['Parno grejanje', 3],
-				  ['Ves masina', 25],
-				  ['Sporet Gorenje', 7],
-				  ['Zamrzivac Bosch', 4]
+				  ['Veš mašina', 25],
+				  ['Šporet Gorenje', 7],
+				  ['Zamrzivač Bosch', 4]
 				]);
 
 				  // Optional; add a title and set the width and height of the chart
-				  var options = {'title':'Broj komandi za uredjaje', 'width':550, 'height':400};
+				  var options = {'title':'Broj komandi za uređaje', 'width':550, 'height':400};
 
 				  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
 				  chart.draw(data, options);
@@ -225,13 +231,13 @@
 				  ['Task', 'Hours per Day'],
 				  ['TV Samsung', 137],
 				  ['Parno grejanje', 82],
-				  ['Ves masina', 67],
-				  ['Sporet Gorenje', 107],
-				  ['Zamrzivac Bosch', 492]
+				  ['Veš mašina', 67],
+				  ['Šporet Gorenje', 107],
+				  ['Zamrzivač Bosch', 492]
 				]);
 
 				  // Optional; add a title and set the width and height of the chart
-				  var options = {'title':'Prosecno dnevno koriscenje', 'width':550, 'height':400};
+				  var options = {'title':'Prosečno dnevno korišćenje', 'width':550, 'height':400};
 
 				  var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
 				  chart.draw(data, options);

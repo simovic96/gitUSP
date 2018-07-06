@@ -1,13 +1,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		
+		<link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<title>Festival - Početna</title>
+		<title>Uređaj zamrzivač Bosch</title>
 		<style>
 			/* Popup container - can be anything you want */
 			.popup {
@@ -79,42 +82,47 @@
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
-				<li class="nav-item active activeLink">
-					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
+				<li class="nav-item ">
+					<a class="nav-link" href="index.html">Početna </a>
 				  </li>
-				  <li class="nav-item dropdown">
-					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Festival
+				  <li class="nav-item dropdown active activeLink">
+					<a class="nav-link " href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Komande <span class="sr-only">(current)</span>
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
-					  <a class="dropdown-item" href="ofestivalu.html">O Festivalu</a>
-					  <a class="dropdown-item" href="ziri.html">Žiri</a>
-					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
-					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
-					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					  <a class="dropdown-item" href="zadajkomandu.html">Zadajte komandu</a>
+					  <a class="dropdown-item" href="prikazizadateakcije.html">Trenutne</a>
 					</div>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Program
+					  Uređaji
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
-					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
-					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					  <a class="dropdown-item" href="dodajuredjaj.html">Pretraga</a>
+					  <a class="dropdown-item" href="prikazmojihuredjaja.html">Moji uređaji</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Pregled
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="istorijaakcija.html">Istorija</a>
+					  <a class="dropdown-item" href="opstastatistika.html">Statistika</a>
+					  <a class="dropdown-item" href="parametriStanje.html">Stanje parametara</a>
 					</div>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="glumci.html">Glumci</a>
+					<a class="nav-link" href="ecomode.html">EcoMode</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="vesti.html">Vesti</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+					<a class="nav-link" href="anketa.html">Anketa</a>
 				  </li>
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+			
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/nonotif.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
@@ -177,15 +185,15 @@
 	<div class="container">
 		<br>
 		<div class="row justify-content-center align-items-center">
-			<h2>TV Samsung Cometa</h2>				  
+			<h2>Zamrzivač Bosch</h2>				  
 				  <table class="table table-striped">
 					<thead>
 					  <tr>
 						<th></th>
-						<th>Uredjaj</th>
+						<th>Uređaj</th>
 						<th>Serijski broj</th>
 						<th>Povezan od</th>
-						<th>Jacina signala</th>
+						<th>Jačina signala</th>
 						<th></th>
 						<th></th>
 					  </tr>
@@ -193,7 +201,7 @@
 					<tbody>
 					  <tr id="5">
 						<td><img src="img/zamrzivac.png" height="40" width="40"></td>
-						<td>Zamrzivac Bosch FH210W</td>
+						<td>Zamrzivač Bosch FH210W</td>
 						<td>dfdg22ads522s</td>
 						<td>02-02-2018</td>
 						<td><img src="img/signal2.png" height="40" width="40"></td>
@@ -201,8 +209,8 @@
 							<div class="popup">
 								<button type="button" class="btn btn-info popup" onmouseenter="myFunction5()" onmouseleave="myFunction5()">Statistika</button>
 								<p class="popuptext" id="myPopup5">
-									Trajanje koriscenja: 99h 02m<br/>
-									Dnevno prosecno radi: 8h 12m<br/>
+									Trajanje korišćenja: 99h 02m<br/>
+									Dnevno prosečno radi: 8h 12m<br/>
 									Broj zadatih komandi: 4	
 								</p>
 							</div>
@@ -214,11 +222,11 @@
 				  <table class="table table-striped">
 					<thead>
 					  <tr>
-						<th>Datum pocetka</th>
-						<th>Vreme pocetka</th>
+						<th>Datum početka</th>
+						<th>Vreme početka</th>
 						<th>*Datum kraja</th>
 						<th>*Vreme kraja</th>
-						<th>*Trajanje izvrsavanja(min)</th>
+						<th>*Trajanje izvršavanja(min)</th>
 						<th>*Dodatni parametri</th>
 					  </tr>
 					</thead>
@@ -253,7 +261,7 @@
 					  </tr>
 					</form>				
 					</tbody>
-					<br><p><i>Polja oznacena sa * su opciona</i></p>
+					<br><p><i>Polja označena sa * su opciona</i></p>
 				  </table>
 				  
 				  <br/><br/>
@@ -261,6 +269,12 @@
 	  </div>
 		
 	</div>
+	<footer class="page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white; ">
+		<div class="footer-copyright py-3 text-center">
+        <i>© 2018 Copyright: Skorković Srđan, Simović Aleksa, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
+		</i>
+    </div>
+	</footer>
 	<footer class="fixed-bottom page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white; ">
 		<div class="footer-copyright py-3 text-center">
         <i>© 2018 Copyright: Skorković Srđan, Simović Aleksa, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu

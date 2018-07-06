@@ -1,13 +1,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<title>Festival - Početna</title>
+		<title>Istorija komandi</title>
 		<style>
 			.table-wrapper-2 {
 				display: block;
@@ -28,42 +30,46 @@
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
-				<li class="nav-item active activeLink">
-					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
+				<li class="nav-item ">
+					<a class="nav-link" href="index.html">Početna </a>
 				  </li>
 				  <li class="nav-item dropdown">
-					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Festival
+					<a class="nav-link " href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Komande <span class="sr-only">(current)</span>
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
-					  <a class="dropdown-item" href="ofestivalu.html">O Festivalu</a>
-					  <a class="dropdown-item" href="ziri.html">Žiri</a>
-					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
-					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
-					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					  <a class="dropdown-item" href="zadajkomandu.html">Zadajte komandu</a>
+					  <a class="dropdown-item" href="prikazizadateakcije.html">Trenutne</a>
 					</div>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Program
+					  Uređaji
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
-					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
-					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					  <a class="dropdown-item" href="dodajuredjaj.html">Pretraga</a>
+					  <a class="dropdown-item" href="prikazmojihuredjaja.html">Moji uređaji</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown active activeLink">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Pregled
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="istorijaakcija.html">Istorija</a>
+					  <a class="dropdown-item" href="opstastatistika.html">Statistika</a>
+					  <a class="dropdown-item" href="parametriStanje.html">Stanje parametara</a>
 					</div>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="glumci.html">Glumci</a>
+					<a class="nav-link" href="ecomode.html">EcoMode</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="vesti.html">Vesti</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+					<a class="nav-link" href="anketa.html">Anketa</a>
 				  </li>
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/nonotif.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
@@ -126,17 +132,17 @@
 	<div class="container">
 		<br>
 		<div class="row justify-content-center align-items-center">
-			<table width="100%"><tr><td><center><h2>Moji uredjaji <button class="btn btn-outline-danger" onclick="resetStats()">Resetuj statistiku</button></h2></center><br></td></tr>
+			<table width="100%"><tr><td><center><h2>Moji uređaji <button class="btn btn-outline-danger" onclick="resetStats()">Resetuj istoriju</button></h2></center><br></td></tr>
 			<tr><td><div class="table-wrapper-2">			
 				  <table class="table table-striped table-responsive-md table-fixed" width="100%">
 					<thead>
 					  <tr>
 						<th></th>
-						<th>Uredjaj</th>
+						<th>Uređaj</th>
 						<th>Serijski broj</th>
 						<th>Komanda</th>
 						<th>Trajanje</th>
-						<th>Vreme pocetka</th>
+						<th>Vreme početka</th>
 						<th>Parametri</th>
 					  </tr>
 					</thead>
@@ -145,61 +151,61 @@
 						<td><img src="img/grejanje.png" height="40" width="40"></td>
 						<td>Parno grejanje stana</td>
 						<td>nvvv454dgha3</td>
-						<td>Ukljuci</td>
+						<td>Uključi</td>
 						<td>/</td>
 						<td>10-07-2018 05:30</td>
 						<td>Temperatura stana na 23stepena</td>
 					  </tr>
 					  <tr id="2">
 						<td><img src="img/sporet.png" height="40" width="40"></td>
-						<td>Elektricni sporet Gorenje 1231</td>
+						<td>Električni šporet Gorenje 1231</td>
 						<td>34saasdg3sda</td>
-						<td>Ukljuci</td>
+						<td>Uključi</td>
 						<td>20min</td>
 						<td>12-04-2018 19:55</td>
-						<td>Ringla-3, jacina-6</td>
+						<td>Ringla-3, jačina-6</td>
 					  </tr>
 					  <tr id="3">
 						<td><img src="img/tv.jpg" height="40" width="40"></td>
 						<td>TV Samsung Cometa 330</td>
 						<td>da2sdad2yhg4</td>
-						<td>Iskljuci</td>
+						<td>Isključi</td>
 						<td>/</td>
 						<td>04-04-2018 12:50</td>
 						<td>/</td>
 					  </tr>					  
 					  <tr id="4">
 						<td><img src="img/vesmasina.png" height="40" width="40"></td>
-						<td>Ves masina Bosch 1250</td>
+						<td>Veš mašina Bosch 1250</td>
 						<td>cccfd33fdsg44</td>
-						<td>Ukljuci</td>
+						<td>Uključi</td>
 						<td>/</td>
 						<td>10-05-2018 16:30</td>
 						<td>Temperatura-40, centrifuga-800</td>
 					  </tr>
 					  <tr id="5">
 						<td><img src="img/vesmasina.png" height="40" width="40"></td>
-						<td>Ves masina Bosch 1250</td>
+						<td>Veš mašina Bosch 1250</td>
 						<td>cccfd33fdsg44</td>
-						<td>Ukljuci</td>
+						<td>Uključi</td>
 						<td>/</td>
 						<td>12-04-2018 05:30</td>
 						<td>Temperatura-90, centrifuga-1000</td>
 					  </tr>
 					  <tr id="6">
 						<td><img src="img/sporet.png" height="40" width="40"></td>
-						<td>Elektricni sporet Gorenje 1231</td>
+						<td>Električni šporet Gorenje 1231</td>
 						<td>34saasdg3sda</td>
-						<td>Ukljuci</td>
+						<td>Uključi</td>
 						<td>2h 30min</td>
 						<td>02-10-2017 08:40</td>
-						<td>Ringla-2, jacina-4</td>
+						<td>Ringla-2, jačina-4</td>
 					  </tr>
 					  <tr id="7">
 						<td><img src="img/grejanje.png" height="40" width="40"></td>
 						<td>Parno grejanje stana</td>
 						<td>nvvv454dgha3</td>
-						<td>Ukljuci</td>
+						<td>Uključi</td>
 						<td>1h</td>
 						<td>22-08-2017 11:20</td>
 						<td>Temperatura stana na 23stepena</td>
@@ -208,7 +214,7 @@
 						<td><img src="img/tv.jpg" height="40" width="40"></td>
 						<td>TV Samsung Cometa 330</td>
 						<td>da2sdad2yhg4</td>
-						<td>Ukljuci</td>
+						<td>Uključi</td>
 						<td>1h</td>
 						<td>06-06-2017 19:40</td>
 						<td>Kanal 4</td>
