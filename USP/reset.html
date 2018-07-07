@@ -8,71 +8,33 @@
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<title>Anketa</title>
-		<script>
-		function checkFields() {
-			if (forma.odg1.value=="" || forma.odg2.value=="" || forma.odg3.value=="") {
-				alert("Molimo unesite sve odgovore!");
-				return;
-			}
-			alert("Hvala Vam na izdvojenom vremenu, potrudićemo se da što više unapredimo aplikaciju!");
-		}
-		</script>
+		<title>Resetuj lozinku</title>
 	</head>
 	<body style="background-color:#F2F2F2;">
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-12">
 		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
-			<a href="index.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<a href="index2.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
 			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
 				<li class="nav-item ">
-					<a class="nav-link" href="index.html">Početna </a>
-				  </li>
-				  <li class="nav-item dropdown">
-					<a class="nav-link " href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Komande <span class="sr-only">(current)</span>
-					</a>
-					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
-					  <a class="dropdown-item" href="zadajkomandu.html">Zadajte komandu</a>
-					  <a class="dropdown-item" href="prikazizadateakcije.html">Trenutne</a>
-					</div>
-				  </li>
-				  <li class="nav-item dropdown">
-					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Uređaji
-					</a>
-					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="dodajuredjaj.html">Pretraga</a>
-					  <a class="dropdown-item" href="prikazmojihuredjaja.html">Moji uređaji</a>
-					</div>
-				  </li>
-				  <li class="nav-item dropdown">
-					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Pregled
-					</a>
-					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="istorijaakcija.html">Istorija</a>
-					  <a class="dropdown-item" href="opstastatistika.html">Statistika</a>
-					  <a class="dropdown-item" href="parametriStanje.html">Stanje parametara</a>
-					</div>
+					<a class="nav-link" href="index2.html">Početna </a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="ecomode.html">EcoMode</a>
+					<a class="nav-link" href="medijator.html">Medijator </a>
+				  </li>
+				  <li class="nav-item ">
+					<a class="nav-link" href="register.html">Registracija <span class="sr-only">(current)</span></a>
 				  </li>
 				  <li class="nav-item active activeLink">
-					<a class="nav-link" href="anketa.html">Anketa</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="index2.html">Odjava</a>
+					<a class="nav-link" href="login.html">Prijavljivanje</a>
 				  </li>
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
-				<li class="nav-item"><a class="nav-link" href=""><img src="img/nonotif.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
@@ -137,24 +99,33 @@
 		<div class="row">
 			<div class="col-sm-1">&nbsp;</div>
 			<div class="col-sm-10">
-				<div class="alert alert-dark" role="alert">
-					<i>Trenutno postoji aktivna anketa! Molimo Vas da je popunite, kako bismo unapredili kvalitet usluga!</i>
-				</div>
-				<h2>Anketa</h2>
+				<h2>Resetuj lozinku</h2>
 				<form method="post" action="" id="contactfrm" role="form" name="forma">
+					
 					<div class="form-group">
-						<label for="odg1">Da li ste zadovoljni aplikacijom? <i>Ako niste, opišite čime niste.</i></label>
-						<textarea name="komentar" class="form-control" id="odg1" cols="3" rows="5" placeholder="Unesite vašu poruku..." title="Unesite odgovor" value=""></textarea>
+						<label for="email">Email:*</label>
+						<input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" value="" required>
 					</div>
 					<div class="form-group">
-						<label for="odg2">Koja funkcionalnost najviše koristite i zašto?</label>
-						<textarea name="komentar" class="form-control" id="odg2" cols="3" rows="5" placeholder="Unesite vašu poruku..." title="Unesite odgovor" value=""></textarea>
+						<label for="username">Korisničko ime:*</label>
+						<input type="text" class="form-control" name="username" id="username" placeholder="Unesite korisnicko ime" value="" title="Unesite svoj email" required>
 					</div>
 					<div class="form-group">
-						<label for="odg3">Šta aplikacija trenutno ne omogućava, a Vama bi značilo?</label>
-						<textarea name="komentar" class="form-control" id="odg3" cols="3" rows="5" placeholder="Unesite vašu poruku..." title="Unesite odgovor" value=""></textarea>
+						<label for="question">Odaberite sigurnosno pitanje:*</label>
+						<br>
+						<select>
+							<option>Kako Vam se zove ljubimac?</option>
+							<option>Kako je devojkačko prezime Vaše majke?</option>
+							<option>Gde ste rođeni?</option>
+							<option>Koja Vam je omiljena boja?</option>
+						</select>
 					</div>
-					<button name="dugme" type="submit" class="btn btn-lg btn-read-more" id="posalji" onclick="checkFields()">Pošalji</button>
+					<div class="form-group">
+						<label for="answer">Unesite odgovor:*</label>
+						<input type="text" class="form-control" name="answer" id="answer" placeholder="Ponovite lozinku" title="Unesite svoj email" required>
+					</div>
+					<p><i>Polja obeležena zvezdicom(*) neophodno je popuniti.</i></p>
+					<button name="dugme" type="submit" class="btn btn-lg btn-read-more" id="posalji" onclick="fja()">Pošalji</button>
 				</form>
 				<div id="rezultat" ></div>
 			</div>
@@ -168,4 +139,10 @@
     </div>
 	</footer>
 	</body>
+	<script>
+	function fja() {
+		alert("Sifra je uspešno poslata na Vaš email");
+		location.href = "login.html";
+	}
+	</script>
 </html>
